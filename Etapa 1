@@ -14,6 +14,7 @@ chave5 = []
 chave6 = []
 chave7 = []
 chave8 = []
+x = 0
 for i in range(1,6):
     x = input(f"Time {i}")
     lista.append(x)
@@ -51,4 +52,8 @@ while len(chave1) !=4:
         chave1.append(random.choice(asia))
     elif any(oceania) not in chave1 and len(oceania) !=0:
         chave1.append(random.choice(oceania))
+    if any(africa) not in chave1 and len(europa) !=0 and x<=2:
+        chave1.append(random.choice(europa))
+    else:
+        x = x+1
 print(chave1)
