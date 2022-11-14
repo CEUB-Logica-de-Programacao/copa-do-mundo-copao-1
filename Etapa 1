@@ -1,1 +1,37 @@
-
+import random
+lista = []
+europa = []
+africa = []
+asia = []
+oceania = []
+america = []
+cchave = []
+chave1 = []
+for i in range(1,5):
+    x = input(f"Time {i}")
+    lista.append(x)
+    y = input(f"{x} é de qual continente?")
+    h = True
+    while h == True:
+        if y.upper() == "EUROPA":
+            europa.append(x)
+            h = False
+        elif y.upper() == "ÁFRICA":
+            africa.append(x)
+            h = False
+        elif y.upper() == "OCEANIA":
+            oceania.append
+            h = False
+        elif y.upper() == "ÁSIA":
+            asia.append(x)
+            h = False
+        elif y.upper() == "AMÉRICA":
+            america.append(x)
+            h = False
+        else:
+            print("Continente inválido")
+            y = input(f"{x} é de qual continente?")
+    z = input(f"O time {x} é cabeça de chave?(S/N)")
+    if z.upper() == "S":
+        cchave.append(x)
+chave1.append(random.choice(africa))
