@@ -14,8 +14,7 @@ chave5 = []
 chave6 = []
 chave7 = []
 chave8 = []
-
-for i in range(1,5):
+for i in range(1,6):
     x = input(f"Time {i}")
     lista.append(x)
     y = input(f"{x} é de qual continente?")
@@ -42,4 +41,14 @@ for i in range(1,5):
     z = input(f"O time {x} é cabeça de chave?(S/N)")
     if z.upper() == "S":
         cchave.append(x)
-chave1.append(random.choice(africa))
+chave1.append(random.choice(lista))
+while len(chave1) !=4:
+    if any(africa) not in chave1 and len(africa) !=0:
+        chave1.append(random.choice(africa))
+    elif any(america) not in chave1 and len(america) !=0:
+        chave1.append(random.choice(america))
+    elif any(asia) not in chave1 and len(asia) !=0:
+        chave1.append(random.choice(asia))
+    elif any(oceania) not in chave1 and len(oceania) !=0:
+        chave1.append(random.choice(oceania))
+print(chave1)
